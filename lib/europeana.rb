@@ -1,9 +1,12 @@
+require "deprecation"
 require "europeana/version"
 require "net/http"
 require "uri"
 require "active_support/core_ext/object"
 
 module Europeana
+  extend Deprecation
+
   URL = 'http://www.europeana.eu/api/v2'
   
   autoload :Errors, 'europeana/errors'
@@ -71,7 +74,12 @@ module Europeana
     def record(record_id, params = {})
       Record.new(record_id, params).get
     end
+    
+    def deprecation_warning
+      Deprecation.warn(Europeana, 'The europeana gem is deprecated. Please upgrade to the europeana-api gem.')
+    end
   end
   
   self.defaults!
+  self.deprecation_warning
 end

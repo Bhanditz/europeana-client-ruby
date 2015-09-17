@@ -1,3 +1,4 @@
+require "europeana"
 require "uri"
 
 module Europeana

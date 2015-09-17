@@ -1,3 +1,5 @@
+require "europeana"
+
 module Europeana
   module Errors
     ##

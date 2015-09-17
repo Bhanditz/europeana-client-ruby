@@ -1,3 +1,5 @@
+require "europeana"
+
 module Europeana
   ##
   # Interface to Europeana API's Search method
