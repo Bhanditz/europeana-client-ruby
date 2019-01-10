@@ -1,3 +1,7 @@
+**This project is not maintained anymore**
+
+---
+
 # Europeana
 
 Ruby client library for the search and retrieval of records from the [Europeana
